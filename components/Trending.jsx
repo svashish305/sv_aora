@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { View, Text, FlatList, TouchableOpacity, ImageBackground, Image } from 'react-native'
+import { FlatList, TouchableOpacity, ImageBackground, Image } from 'react-native'
 import * as Animatable from 'react-native-animatable'
 
 import { icons } from '../constants'
@@ -43,7 +43,7 @@ const TrendingItem = ({ activeItem, item }) => {
 				/>
 			) : (
 				<TouchableOpacity className="relative justify-center items-center" activeOpacity={0.7} onPress={() => setPlay(true)}>
-					<ImageBackground source={{ uri: thumbnail }} className="w-52 h-72 rounded-[35px] my-5 overflow-hidden shadow-lg shadow-black/40" resizeMode="cover" />
+					<ImageBackground source={{ uri: item.thumbnail }} className="w-52 h-72 rounded-[35px] my-5 overflow-hidden shadow-lg shadow-black/40" resizeMode="cover" />
 					<Image source={icons.play} className="w-12 h-12 absolute" resizeMode="contain" />
 				</TouchableOpacity>
 			)}
